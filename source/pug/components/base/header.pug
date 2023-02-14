@@ -1,0 +1,69 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#",
+        text: "What’s new"
+      },
+      {
+        href: "#",
+        text: "Chokers"
+      },
+      {
+        href: "#",
+        text: "Necklaces"
+      },
+      {
+        href: "#",
+        text: "Rings"
+      },
+      {
+        href: "#",
+        text: "Earrings"
+      },
+    ];
+  -
+    const headerLinksAdditional = [
+      {
+        href: "#",
+        text: "About CH"
+      },
+      {
+        href: "#",
+        text: "Stores & Hours"
+      },
+      {
+        href: "#",
+        text: "Contact Us"
+      },
+    ];
+  -
+    const logo = {
+      name: 'icon-logo',
+      width: 66,
+      height: 66
+    };
+
+  header.header(class=headerMods)
+    .container
+      +search().search--desc
+      +burger()
+      +logo(logo, currentUrl).header__logo
+      nav.init-nav
+        ul.init-nav__list
+          li.init-nav__item
+            +btn({span: "Login", href: "#", iconName: "icon-login", iconWidth: 20, iconHeight: 18}).link--icon.link--default.init-nav__link(data-open-modal="login")
+          li.init-nav__item
+            +btn({span: "Card <span>0</span>", href: "#", iconName: "icon-bas", iconWidth: 20, iconHeight: 18}).link--icon.link--default.init-nav__link
+    .header__wrapper
+      .header__menu
+        +search().search--mob
+        nav.main-nav
+          ul.main-nav__list
+            each link in headerLinks
+              li.main-nav__item
+                  a.main-nav__link.link.link--default(href=link.href)=link.text
+          ul.main-nav__list.main-nav__list--additional
+            each item in headerLinksAdditional
+              li.main-nav__item
+                a.main-nav__link.link.link--default(href=item.href)=item.text

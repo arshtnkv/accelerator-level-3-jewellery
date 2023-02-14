@@ -1,0 +1,8 @@
+mixin product(data)
+  article.product
+    +btn({href: `${data.href}`}).product__link
+    .product__img
+      +img(data.img.path, data.img.name, data.img.format, data.img.width, data.img.height, data.img.altText)
+    .product__wrapper
+      .product__title !{data.title}
+      .product__price !{data.price}

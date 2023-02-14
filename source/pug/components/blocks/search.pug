@@ -1,0 +1,9 @@
+mixin search()
+  .search&attributes(attributes)
+    form(action="#" method="POST" autocomplete="off")
+      +custom-input({
+        inputType: "search",
+        inputName: "search",
+        inputPlaceholder: "Type here to search",
+        inputIcon: "icon-search"
+      })

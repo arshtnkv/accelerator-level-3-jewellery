@@ -1,0 +1,81 @@
+.catalog-filter {
+  @include vp-1023 {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-default-black, .6);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-120%);
+    transition: transform $trans-default, opacity $trans-default, visibility $trans-default 1s;
+    z-index: 30;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+      transition: transform $trans-default, opacity $trans-default;
+    }
+  }
+
+  &__wrapper {
+    @include vp-1023 {
+      position: relative;
+      width: 40%;
+      height: 100%;
+      background-color: $color-default-white;
+    }
+
+    @include vp-767 {
+      width: 80%;
+    }
+  }
+
+  &__overlay {
+    @include vp-1023 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__btn-close {
+    display: none;
+
+    @include vp-1023 {
+      position: absolute;
+      top: 0;
+      right: -32px;
+      display: block;
+    }
+
+    .btn {
+      padding: 6px;
+    }
+  }
+
+  &__accordion {
+    margin-bottom: 20px;
+  }
+
+  &__submit,
+  &__reset {
+    @include vp-1023 {
+      padding: 0 40px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      justify-content: center;
+      width: 100%;
+      padding: 25px;
+    }
+  }
+}

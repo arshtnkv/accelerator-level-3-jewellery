@@ -1,0 +1,87 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    display: grid;
+    grid-template-columns: 200px 66px 200px;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 23px;
+    padding-bottom: 23px;
+    background-color: $color-default-white;
+
+    z-index: 10;
+
+    @include vp-767 {
+      grid-template-columns: 60px 66px 60px;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+
+    svg {
+      color: $color-medium-wood;
+    }
+  }
+
+  &__wrapper {
+    border-top: 1px solid $color-seashell;
+
+    @include vp-1023 {
+      z-index: 20;
+      position: fixed;
+      top: 115px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: $color-medium-wood;
+      border: none;
+      opacity: 0;
+      overflow-y: scroll;
+      transition: opacity $trans-600;
+    }
+  }
+
+  &__menu {
+    padding: 11.5px 0;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &.is-open {
+
+    .container {
+      color: $color-default-white;
+      background-color: $color-medium-wood;
+    }
+
+    .header__wrapper {
+      height: 100%;
+      opacity: 1;
+      transition: opacity $trans-600;
+    }
+
+    .header__menu {
+      padding: 0 24px 150px;
+
+      @include vp-767 {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+
+    .burger span {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-default-white;
+    }
+  }
+}

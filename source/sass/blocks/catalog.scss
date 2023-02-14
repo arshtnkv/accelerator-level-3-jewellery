@@ -1,0 +1,68 @@
+.catalog {
+  overflow: hidden;
+  .container {
+    // position: relative;
+    display: grid;
+    grid-template-columns: 245px 1fr;
+    grid-column-gap: 50px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include vp-767 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__btn-filter {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    .btn {
+      justify-content: center;
+      width: 100%;
+      padding: 25px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: -1000%;
+      bottom: 0;
+      width: 10000%;
+      height: 1px;
+      background-color: $color-seashell;
+    }
+  }
+
+  &__wrapper {
+    padding-bottom: 50px;
+  }
+
+  &__controls {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0;
+  }
+}

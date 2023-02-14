@@ -1,0 +1,18 @@
+mixin subscribe-form()
+  section.subscribe-form
+    h2.subscribe-form__title.title.title--h2 The good stuff in&nbsp;your inbox
+    p.subscribe-form__text News and updates from CH. No&nbsp;spam, we&nbsp;promise.
+    .subscribe-form__form
+      form(action="#", method="post", autocomplete)
+        +custom-input({
+          inputType: "email",
+          inputName: "subscribe-email",
+          inputPlaceholder: "Your E-mail",
+        })
+        +btn({
+          text: "Sign up",
+          type: "submit",
+          iconName: "icon-arrow",
+          iconWidth: 30,
+          iconHeight: 11,
+        }).btn--icon-arrow-right.btn--underline

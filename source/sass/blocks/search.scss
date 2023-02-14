@@ -1,0 +1,36 @@
+.search {
+  .custom-input {
+    @include vp-1023 {
+      margin-bottom: 40px;
+    }
+
+    label {
+      padding-left: 30px;
+      background-color: rgba($color-default-white, .15);
+      border-radius: 21px;
+    }
+
+    input {
+      min-height: 40px;
+      background-color: $color-transparent;
+
+      @include vp-1023 {
+        color: $color-default-white;
+      }
+    }
+  }
+
+  &--desc {
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &--mob {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
+}

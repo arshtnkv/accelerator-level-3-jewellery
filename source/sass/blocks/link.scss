@@ -1,0 +1,46 @@
+.link {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  user-select: none;
+  white-space: nowrap;
+
+  transition: opacity $trans-default, color $trans-default;
+
+  &--default {
+    span {
+      display: inline-block;
+      margin-left: 5px;
+    }
+    @include hover-focus {
+      color: $color-medium-wood;
+      transition: color $trans-default;
+    }
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+
+    svg {
+      flex-grow: 0;
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+      color: $color-medium-wood;
+    }
+  }
+
+  &--underline {
+    text-decoration: underline;
+    text-decoration-color: $color-medium-wood;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color $trans-default;
+
+    @include hover-focus {
+      text-decoration-color: $color-transparent;
+      transition: text-decoration-color $trans-default;
+    }
+  }
+}

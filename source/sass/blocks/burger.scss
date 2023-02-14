@@ -1,0 +1,89 @@
+.burger {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  background-color: $color-transparent;
+  border: none;
+
+  @include vp-1023 {
+    display: flex;
+  }
+
+  span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: $color-medium-wood;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &.is-open {
+      span:nth-child(1) {
+        left: 8%;
+        top: 30%;
+        width: 30px;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        transform: rotate(90deg);
+        transition-delay: 150ms;
+      }
+
+      span:nth-child(2) {
+        left:2px;
+        top: 20px;
+        width: 20px;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        transform: rotate(45deg);
+        transition-delay: 50ms;
+      }
+
+      span:nth-child(3) {
+        left:14px;
+        top: 20px;
+        width: 20px;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        transform: rotate(-45deg);
+        transition-delay: 100ms;
+      }
+
+    .burger:not(.is-open):hover {
+      span:nth-child(1) {
+        top: -2%;
+        top: 50%;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+      }
+
+      span:nth-child(2) {
+        top: 13%;
+        transition: .4s cubic-bezier(.8, .5, .2, 1.4);
+      }
+
+      span:nth-child(3) {
+        top: -2%;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.custom-input {
+  position: relative;
+  display: flex;
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    input {
+      flex-grow: 1;
+      min-height: 48px;
+      padding: 10px;
+
+      border: none;
+      outline: none;
+
+      transition: border $tf-default;
+
+      @media screen and (max-width: 767px) {
+        max-width: unset;
+        width: 100%;
+      }
+
+      &::placeholder {
+        font-size: 14px;
+        opacity: .7;
+        transition: opacity $trans-default;
+
+        @include vp-1023 {
+          color: $color-default-white;
+        }
+      }
+
+      &:hover {
+        &::placeholder {
+          opacity: 1;
+          transition: opacity $tf-default;
+        }
+      }
+
+    }
+  }
+
+  &__label {
+    @media screen and (max-width: 767px) {
+      margin: 0 0 18px 0;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    display: block;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      color: $color-wood-bark;
+
+      @include vp-1023 {
+        color: $color-default-white;
+      }
+    }
+  }
+
+  &__error {
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+
+    color: #ff1553;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    @media screen and (max-width: 767px) {
+      bottom: 20px;
+    }
+  }
+
+  &.is-invalid {
+    input {
+      border: 2px solid #ff1553;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba(#ff1553, 0.5);
+      }
+    }
+  }
+
+  &.is-valid {
+    input {
+      border: 2px solid #22b259;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba(#22b259, 0.5);
+      }
+    }
+  }
+
+  .input-message {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+
+    &--invalid {
+      color: #ff0000;
+    }
+
+    &--valid {
+      color: #15ab07;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+mixin modal-login()
+  .modal__img
+    +img("content", "img-1", "jpg", 430, 148, "image")
+  .modal__inner
+    h2.modal__title.title.title--h2 Log In
+    .modal__form(data-form-validate, data-callback="base")
+      form(action="#", method="post", autocomplete)
+        +custom-input({
+          inputType: "email",
+          inputName: "login-email",
+          inputPlaceholder: "Your E-mail",
+        })
+        +custom-input({
+          inputType: "password",
+          inputName: "login-password",
+          inputPlaceholder: "Password",
+        })
+        .modal__link
+          +btn({
+            text: "Forgot your password?",
+            href: "#"
+          }).link--default
+        .modal__form-submit
+          +btn({
+            text: "Log In",
+            type: "submit"
+          }).btn--brown.btn--full-screen
+        p.modal__sigup.text
+          | Don’t have an account?
+          +btn({text: "Sign up", href: "#"}).link--default

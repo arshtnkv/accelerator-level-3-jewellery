@@ -1,0 +1,63 @@
+mixin shop()
+  -
+    const productList = [
+      {
+        href: "#",
+        title: "Necklace with amethyst",
+        price: "$ 145",
+        img: {
+          path: "slides",
+          name: "img-1",
+          format: "png",
+          width: 262,
+          height: 276,
+          altText: "img-1"
+        }
+      },
+      {
+        href: "#",
+        title: "Necklace with amethyst",
+        price: "$ 115",
+        img: {
+          path: "slides",
+          name: "img-2",
+          format: "png",
+          width: 262,
+          height: 276,
+          altText: "img-1"
+        }
+      },
+      {
+        href: "#",
+        title: "Necklace with amethyst",
+        price: "$ 215",
+        img: {
+          path: "slides",
+          name: "img-3",
+          format: "png",
+          width: 262,
+          height: 276,
+          altText: "img-1"
+        }
+      },
+      {
+        href: "#",
+        title: "Necklace with amethyst",
+        price: "$ 95",
+        img: {
+          path: "slides",
+          name: "img-4",
+          format: "png",
+          width: 262,
+          height: 276,
+          altText: "img-1"
+        }
+      },
+    ];
+
+  section.shop
+    .container
+      h2.shop__title.title.title--h2.title--center New In
+      .shop__link
+        +btn({text: "Shop Now", href: "catalog.html"}).link--underline
+      +slider(productList, "default").shop__slider

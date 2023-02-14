@@ -1,0 +1,27 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Главная"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html"
+
+block main
+  main
+    // Into
+    +intro(introMain)
+    // Shop
+    +shop()
+    // Blog
+    +blog()
+    // Faq
+    +faq()
+    // Gallery
+    +gallery()
+
+block modals
+  +modal("modal--login")(data-modal="login")
+    +modal-login()

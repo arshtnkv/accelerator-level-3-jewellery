@@ -1,0 +1,22 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Католог"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "catalog.html"
+
+block main
+  main
+    // Intro
+    +intro(introCatalog).intro--small
+    // Catalog
+    +catalog()
+
+
+block modals
+  +modal("modal--login")(data-modal="login")
+    +modal-login()

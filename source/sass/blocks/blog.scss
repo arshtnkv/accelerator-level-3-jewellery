@@ -1,0 +1,140 @@
+.blog {
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include vp-767 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  &__card {
+    display: flex;
+    background-color: $color-desert-storm;
+
+    @include vp-1023 {
+      grid-row: 1/2;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+  }
+
+  &__card--big {
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+    @include vp-1023 {
+      grid-row: 3/4;
+      grid-column: 1/2;
+    }
+
+    .blog__img {
+      width: 100%;
+
+      @include vp-1023 {
+        width: 50%;
+      }
+
+      @include vp-767 {
+        width: 100%;
+      }
+    }
+
+    .blog__content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 47.6%;
+      margin-top: auto;
+      margin-left: auto;
+      background-color: $color-desert-storm;
+
+      @include vp-1023 {
+        position: relative;
+        height: 100%;
+      }
+    }
+  }
+
+  &__card--reverse {
+    flex-direction: row-reverse;
+
+    @include vp-1023 {
+      grid-row: 2/3;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 50%;
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+
+    @include vp-767 {
+      width: 100%;
+      padding: 86px 20px;
+    }
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-zorba;
+  }
+}

@@ -1,0 +1,28 @@
+.intro {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 463px;
+  color: $color-default-white;
+  background-color: rgba($color-Very-dark-brown, .7);
+
+  .container {
+    text-align: center;
+  }
+
+  &--small {
+    min-height: 261px;
+
+    .intro__title {
+      font-size: 34px;
+    }
+
+    .intro__title span {
+      font-weight: 400;
+      font-size: 22px;
+      text-transform: initial;
+      letter-spacing: 0;
+    }
+  }
+}

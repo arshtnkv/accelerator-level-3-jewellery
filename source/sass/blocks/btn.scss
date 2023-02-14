@@ -1,0 +1,87 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+
+  color: $color-default-white;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: opacity $trans-default;
+
+  &--red {
+    background-color: $color-torch-red;
+  }
+
+  &--brown {
+    background-color: $color-medium-wood;
+  }
+
+  &--black {
+    background-color: $color-wood-bark;
+  }
+
+  &--icon-arrow-right {
+    transition: border-color $trans-default, color $trans-default;
+
+    @include hover-focus {
+      color: $color-medium-wood;
+      border-color: $color-medium-wood;
+      transition: border-color $trans-default, color $trans-default;
+
+      svg {
+        color: $color-medium-wood;
+        transition: color $trans-default;
+      }
+    }
+
+    svg {
+      width: 30px;
+      height: 11px;
+      margin-left: 10px;
+      color: $color-default-white;
+      transition: color $trans-default;
+    }
+  }
+
+  &--icon-close {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--underline {
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  &--circle {
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  &--border-brown {
+    border: 1px solid $color-medium-wood;
+  }
+
+  &--color-black {
+    color: $color-wood-bark;
+  }
+
+  &--full-screen {
+    width: 100%;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}

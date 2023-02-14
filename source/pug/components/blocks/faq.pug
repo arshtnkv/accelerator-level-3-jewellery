@@ -1,0 +1,25 @@
+mixin faq()
+  -
+    const faqList = [
+      {
+        trigger: "What materials are the jewellery made&nbsp;of?",
+        text: "Our jewellerry is&nbsp;made of&nbsp;solid gold, silver or&nbsp;leather. Also, some jewellery contains precious and semiprecious stones and crystals."
+      },
+      {
+        trigger: "Which countries do&nbsp;you deliver&nbsp;to?",
+        text: "Our jewellerry is&nbsp;made of&nbsp;solid gold, silver or&nbsp;leather. Also, some jewellery contains precious and semiprecious stones and crystals."
+      },
+      {
+        trigger: "What are the payment methods?",
+        text: "Our jewellerry is&nbsp;made of&nbsp;solid gold, silver or&nbsp;leather. Also, some jewellery contains precious and semiprecious stones and crystals."
+      },
+      {
+        trigger: "Can I&nbsp;return the jewellery if&nbsp;it&nbsp;didn&rsquo;t fit&nbsp;me?",
+        text: "Our jewellerry is&nbsp;made of&nbsp;solid gold, silver or&nbsp;leather. Also, some jewellery contains precious and semiprecious stones and crystals."
+      },
+    ];
+
+  section.faq
+    .container
+      h2.faq__title.title.title--h2.title--center Frequently asked questions
+      +accordion(faqList).faq__accordeon

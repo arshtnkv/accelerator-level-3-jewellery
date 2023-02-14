@@ -1,0 +1,70 @@
+mixin blog()
+  -
+    const blogList = [
+      {
+        title: "How to&nbsp;care for your jewellery",
+        date: "September 30, 2019",
+        link: {
+          text: "Read Article",
+          href: "#"
+        },
+        img: {
+          path: "content/blog",
+          name: "img-1",
+          format: "jpg",
+          width: 285,
+          height: 300,
+          altText: "img1"
+        }
+      },
+      {
+        mod: "big",
+        title: "AW 19 trends",
+        date: "September 16, 2019",
+        link: {
+          text: "Read Article",
+          href: "#"
+        },
+        img: {
+          path: "content/blog",
+          name: "img-2",
+          format: "jpg",
+          width: 285,
+          height: 300,
+          altText: "img2"
+        }
+      },
+      {
+        mod: "reverse",
+        title: "Power of&nbsp;crystalsy",
+        date: "September 23, 2019",
+        link: {
+          text: "Read Article",
+          href: "#"
+        },
+        img: {
+          path: "content/blog",
+          name: "img-3",
+          format: "jpg",
+          width: 285,
+          height: 300,
+          altText: "img3"
+        }
+      },
+    ];
+
+  section.blog
+    .container
+      h2.blog__title.title.title--h2.title--center Blog
+      .blog__link
+        +btn({text: "Read All", href: "#"}).link--underline
+      ul.blog__list
+        each item in blogList
+          li(class=`blog__card${item.mod ? `${` blog__card--`}${item.mod}` : ``}`)
+            .blog__img
+              +img(item.img.path, item.img.name, item.img.format, item.img.width, item.img.height, item.img.altText)
+            blockquote.blog__content
+              .blog__wrapper
+                time.blog__date !{item.date}
+                h3.blog__title.title.title--h3 !{item.title}
+                +btn({text: "Read Articlel", href: "#"}).link--underline

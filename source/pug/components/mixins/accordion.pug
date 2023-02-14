@@ -1,0 +1,38 @@
+mixin accordion(data)
+  .accordion(data-accordion="parent" data-close-inner)&attributes(attributes)
+    each item , i in data
+      if i === 0
+        .accordion__element.is-active(data-accordion="element")
+            button.accordion__button(type="button" data-accordion="button") !{item.trigger}
+            .accordion__content(data-accordion="content")
+              .accordion__wrapper
+                if item.text
+                  p.text !{item.text}
+                if item.inputs
+                  each input in item.inputs
+                    +custom-toggle({
+                      inputLabel: input.label,
+                      inputName: input.name,
+                      inputValue: input.value,
+                      inputChecked: input.isChecked
+                    })
+                if item.divClass
+                  div(class!=item.divClass)
+      else
+        .accordion__element(data-accordion="element")
+            button.accordion__button(type="button" data-accordion="button") !{item.trigger}
+            .accordion__content(data-accordion="content")
+              .accordion__wrapper
+                if item.text
+                  p.text !{item.text}
+                if item.inputs
+                  each input in item.inputs
+                    +custom-toggle({
+                      inputLabel: input.label,
+                      inputName: input.name,
+                      inputValue: input.value,
+                      inputChecked: input.isChecked
+                    })
+                if item.divClass
+                  div(class!=item.divClass)
+

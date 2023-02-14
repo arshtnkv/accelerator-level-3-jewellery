@@ -1,0 +1,14 @@
+mixin btn(options = {})
+  - const tag = options.href ? "a" : "button";
+  - const clas = tag === "button" ? "btn" : "link";
+  - const href = options.href || false;
+  - const text = options.text || "";
+  - const type = options.type || tag === "button" ? options.type || "button" : false;
+  - const target = options.isExternal ? "_blank" : false;
+  - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+
+  #{tag}(class=clas, href=href, target=target, rel=rel, type=type)&attributes(attributes)!=text
+    if options.span || options.span === ""
+      span !{options.span}
+    if options.iconName
+      +icon(options.iconName, options.iconWidth, options.iconHeight)

@@ -1,0 +1,54 @@
+mixin footer(footerMods)
+  -
+    const footerNav = {
+      list: [
+        {
+          href: "#",
+          text: "Ordering & Payment"
+        },
+        {
+          href: "#",
+          text: "Terms & Conditions"
+        },
+        {
+          href: "#",
+          text: "Returns & Exchanges"
+        },
+        {
+          href: "#",
+          text: "Delivery"
+        },
+      ],
+      listAdditional: [
+        {
+          href: "#",
+          text: "About CH"
+        },
+        {
+          href: "#",
+          text: "Stores & Hours"
+        },
+        {
+          href: "#",
+          text: "Jobs"
+        },
+        {
+          href: "#",
+          text: "Contact Us"
+        },
+      ]
+    };
+
+  footer.footer(class=footerMods)
+    .container
+      +subscribe-form()
+      nav.footer-nav
+        ul.footer-nav__list
+          each item in footerNav.list
+            li.footer-nav__item
+              a(class="link link--default") !{item.text}
+        ul.footer-nav__list
+          each item in footerNav.listAdditional
+            li.footer-nav__item
+              a(class="link link--default") !{item.text}
+      +socials()

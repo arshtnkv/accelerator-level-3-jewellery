@@ -1,0 +1,71 @@
+mixin gallery()
+  -
+    const galleryList = [
+      {
+        path: "content/gallery",
+        name: "img-1",
+        format: "jpg",
+        width: 230,
+        height: 230,
+        altText: "img1"
+      },
+      {
+        mod: "big",
+        path: "content/gallery",
+        name: "img-2",
+        format: "jpg",
+        width: 230,
+        height: 230,
+        altText: "img2"
+      },
+      {
+        path: "content/gallery",
+        name: "img-3",
+        format: "jpg",
+        width: 230,
+        height: 230,
+        altText: "img3"
+      },
+      {
+        path: "content/gallery",
+        name: "img-4",
+        format: "jpg",
+        width: 230,
+        height: 230,
+        altText: "img4"
+      },
+      {
+        path: "content/gallery",
+        name: "img-5",
+        format: "jpg",
+        width: 230,
+        height: 230,
+        altText: "img5"
+      },
+      {
+        path: "content/gallery",
+        name: "img-6",
+        format: "jpg",
+        width: 230,
+        height: 230,
+        altText: "img6"
+      },
+      {
+        path: "content/gallery",
+        name: "img-7",
+        format: "jpg",
+        width: 230,
+        height: 230,
+        altText: "img7"
+      },
+    ];
+
+  section.gallery
+    .container
+      h2.gallery__title.title.title--h2.title--center @Chjewellery
+      .gallery__link
+        +btn({text: "Follow Us", href: "#"}).link--underline
+      ul.gallery__list
+        each item in galleryList
+          li(class=`gallery__item${item.mod ? `${` gallery__item--`}${item.mod}` : ``}`)
+            +img(item.path, item.name, item.format, item.width, item.height, item.altText)

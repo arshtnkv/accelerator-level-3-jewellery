@@ -1,0 +1,43 @@
+.title {
+  margin: 0;
+  font-family: $ff-cormorant;
+  font-weight: 700;
+  line-height: 1.2;
+  color: inherit;
+
+  &--h1 {
+    font-size: 45px;
+    letter-spacing: 1.3px;
+
+    @include vp-767 {
+      font-size: 38px;
+    }
+
+    span {
+      display: block;
+
+      font-style: italic;
+      font-weight: 400;
+      font-size: 38px;
+      text-transform: lowercase;
+    }
+  }
+
+  &--h2 {
+    font-size: 34px;
+    letter-spacing: 0.03em;
+  }
+
+  &--h3 {
+    font-weight: 600;
+    font-size: 26px;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

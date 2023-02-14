@@ -1,0 +1,53 @@
+.footer {
+  color: $color-default-white;
+  background-color: $color-default-black;
+
+  .container {
+    display: grid;
+    grid-template-columns: 0.9fr 0.8fr 0.3fr;
+    grid-column-gap: 40px;
+    justify-content: space-between;
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include vp-767 {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

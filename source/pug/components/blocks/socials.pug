@@ -1,0 +1,40 @@
+mixin socials()
+  -
+    const socialList = [
+      {
+        link: "facebook.com",
+        text: "Facebook",
+        iconName: "icon-facebook",
+        iconWidth: 8,
+        iconHeight: 15
+      },
+      {
+        link: "instagram.com",
+        text: "Instagram",
+        iconName: "icon-instagram",
+        iconWidth: 15,
+        iconHeight: 15
+      },
+      {
+        link: "pinterest.com",
+        text: "Pinterest",
+        iconName: "icon-pinterest",
+        iconWidth: 16,
+        iconHeight: 15
+      },
+      {
+        link: "twitter.com",
+        text: "Twitter",
+        iconName: "icon-twitter",
+        iconWidth: 15,
+        iconHeight: 13
+      },
+    ];
+
+  .socials&attributes(attributes)
+    ul.socials__list
+      each item in socialList
+        li.socials__item
+          a(class="socials__link link link--default" href=item.link target= "blank" title=item.text aria-label=item.text)
+            span !{item.text}
+            +icon(item.iconName, item.iconWidth, item.iconHeight)

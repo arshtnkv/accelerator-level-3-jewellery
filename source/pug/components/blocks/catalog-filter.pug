@@ -1,0 +1,13 @@
+mixin catalog-filter()
+  .catalog-filter&attributes(attributes)
+    .catalog-filter__overlay(data-filter="overlay")
+    .catalog-filter__wrapper
+      .catalog-filter__btn-close
+        +btn({iconName: "icon-close", iconWidth: 20, iconHeight: 20}).btn--icon.btn--black(data-filter="close")
+      .catalog-filter__form
+        form(action="#", method="post" autocomplete="off")
+          +accordion(catalogFilter).accordion--filter.catalog-filter__accordion
+          .catalog-filter__submit
+            +btn({text: "Apply", type: "submit"}).btn--brown
+          .catalog-filter__reset
+            +btn({text: "Clear All", type: "reset"}).btn--border-brown.btn--color-black

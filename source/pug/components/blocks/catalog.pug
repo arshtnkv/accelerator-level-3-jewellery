@@ -1,0 +1,19 @@
+mixin catalog()
+  section.catalog
+    .container
+      h2.visually-hidden Католог
+      .catalog__btn-filter
+        +btn({text: "Filter"}).btn--brown(data-filter="trigger")
+
+      +catalog-filter().catalog__filter(data-filter="filter")
+
+      .catalog__content
+        .catalog__wrapper
+          ul.catalog__list
+            each item in catalogList
+              li.catalog__item
+                +product(item)
+
+      .catalog__controls
+        +btn({text: "previus"}).btn--color-black
+        +btn({text: "next"}).btn--color-black

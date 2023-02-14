@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>UI-kit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Jewellery — Jewelry ">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-left"><path d="M30 5.5H1m0 0L6.486 10M1 5.5L6.486 1" stroke="currentColor"/></symbol><symbol id="icon-arrow-right"><path d="M0 5.5h29m0 0L23.514 1M29 5.5L23.514 10" stroke="currentColor"/></symbol><symbol id="icon-arrow"><path d="M0 5.5h29m0 0L23.514 1M29 5.5L23.514 10" stroke="currentColor"/></symbol><symbol id="icon-bas"><g fill="none"><path d="M14 5a4 4 0 11-8 0M1 1h18v16H1V1z" stroke="currentColor"/></g></symbol><symbol id="icon-close" viewBox="0 0 20 20"><g fill="none"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" fill="currentColor"/></g></symbol><symbol id="icon-facebook"><path d="M5.333 8.625h1.905l.762-3H5.333v-1.5c0-.772 0-1.5 1.524-1.5H8V.105A21.797 21.797 0 005.823 0C3.755 0 2.286 1.243 2.286 3.525v2.1H0v3h2.286V15h3.047V8.625z" fill="currentColor"/></symbol><symbol id="icon-instagram"><path d="M7.5 0c2.038 0 2.292.007 3.091.045.8.038 1.343.163 1.822.349.495.19.912.448 1.329.864.38.375.676.829.864 1.33.185.477.312 1.022.349 1.82.035.8.045 1.054.045 3.092 0 2.038-.008 2.292-.045 3.091-.037.8-.164 1.343-.349 1.822-.188.5-.483.954-.864 1.329a3.687 3.687 0 01-1.33.864c-.477.185-1.022.312-1.82.349-.8.035-1.054.045-3.092.045-2.038 0-2.292-.008-3.091-.045-.8-.037-1.343-.164-1.821-.349a3.668 3.668 0 01-1.33-.864 3.678 3.678 0 01-.864-1.33c-.186-.477-.311-1.022-.349-1.82C.01 9.791 0 9.537 0 7.5c0-2.038.007-2.292.045-3.091.038-.8.163-1.343.349-1.821.187-.501.483-.955.864-1.33a3.673 3.673 0 011.33-.864C3.066.208 3.608.083 4.407.045 5.208.01 5.463 0 7.5 0zm0 3.75a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zm4.875-.188a.938.938 0 10-1.875 0 .938.938 0 001.875 0zM7.5 5.25a2.25 2.25 0 110 4.5 2.25 2.25 0 010-4.5z" fill="currentColor"/></symbol><symbol id="icon-login" viewBox="0 0 35 35"><path d="M17.052,34.75a1.25,1.25,0,0,1,0-2.5,14.75,14.75,0,0,0,0-29.5,1.25,1.25,0,0,1,0-2.5,17.25,17.25,0,0,1,0,34.5Z" fill="currentColor"/><path d="M19.626,18.75H1.947a1.25,1.25,0,1,1,0-2.5H19.626a1.25,1.25,0,1,1,0,2.5Z" fill="currentColor"/><path d="M13.234,26.438A1.25,1.25,0,0,1,12.35,24.3l6.384-6.385a.593.593,0,0,0,0-.839L12.35,10.7a1.25,1.25,0,1,1,1.767-1.768L20.5,15.313a3.1,3.1,0,0,1,0,4.374l-6.385,6.385A1.246,1.246,0,0,1,13.234,26.438Z" fill="currentColor"/></symbol><symbol id="icon-logo"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.126 10.12L33 .643l22.874 9.475L65.35 33l-9.477 22.88L33 65.357 10.126 55.88.65 33l9.477-22.88zM33 0l23.334 9.665L66 33l-9.666 23.334L33 66 9.665 56.334 0 33 9.665 9.665 33 0zm-4.433 26.417c-.619-.129-1.382-.193-2.29-.193-1.483 0-2.822.285-4.017.856-1.18.571-2.11 1.377-2.786 2.419-.677 1.027-1.016 2.212-1.016 3.553 0 1.385.332 2.612.994 3.682.662 1.07 1.584 1.905 2.765 2.505 1.195.585 2.549.877 4.06.877.85 0 1.599-.071 2.247-.214a9.692 9.692 0 002.117-.75.633.633 0 00.173-.149c.028-.043.05-.15.064-.321l.216-2.355c0-.042-.05-.064-.15-.064-.073 0-.109.014-.109.043-.389 1.17-.95 2.04-1.685 2.611-.734.571-1.692.857-2.872.857a5.68 5.68 0 01-3.09-.9c-.935-.599-1.684-1.412-2.246-2.44-.547-1.041-.82-2.183-.82-3.424 0-1.3.252-2.434.756-3.404.504-.985 1.216-1.74 2.138-2.269.922-.528 1.987-.792 3.197-.792 2.304 0 3.787 1.192 4.45 3.575.014.043.057.064.129.064.086-.014.13-.043.13-.086l-.26-2.547a2.893 2.893 0 00-.064-.32c-.015-.044-.072-.094-.173-.15a7.457 7.457 0 00-1.858-.664zm19.3 13.292c0-.085-.02-.128-.064-.128-.547 0-.95-.036-1.21-.107-.259-.071-.439-.207-.54-.407-.086-.214-.13-.535-.13-.963v-9.91c0-.429.044-.743.13-.942.101-.2.281-.336.54-.407.26-.086.663-.129 1.21-.129.043 0 .065-.043.065-.128 0-.086-.022-.129-.065-.129l-1.058.022c-.605.028-1.102.043-1.49.043-.433 0-.966-.015-1.6-.043l-1.014-.022c-.044 0-.065.043-.065.129 0 .085.021.128.065.128.561 0 .972.043 1.23.129.26.085.433.235.52.45.1.2.15.513.15.941v4.41h-8.294v-4.41c0-.428.043-.742.13-.942.1-.214.28-.364.54-.45.273-.085.684-.128 1.23-.128.03 0 .044-.043.044-.128 0-.086-.014-.129-.043-.129l-1.037.022c-.634.028-1.16.043-1.577.043-.36 0-.842-.015-1.447-.043l-1.102-.022c-.028 0-.043.043-.043.129 0 .085.015.128.043.128.548 0 .95.043 1.21.129.26.071.432.207.518.407.101.2.152.513.152.941v9.911c0 .428-.05.75-.152.963-.086.2-.266.336-.54.407-.259.071-.662.107-1.21.107-.028 0-.042.043-.042.128 0 .086.014.129.043.129.46 0 .82-.007 1.08-.022l1.49-.021 1.555.021c.26.015.612.022 1.059.022.029 0 .043-.043.043-.129 0-.085-.014-.128-.043-.128-.562 0-.972-.036-1.231-.107-.26-.071-.44-.207-.54-.407-.087-.214-.13-.535-.13-.963v-5.009h8.294v5.009c0 .428-.05.75-.15.963-.087.2-.26.336-.52.407-.258.071-.669.107-1.23.107-.044 0-.065.043-.065.128 0 .086.021.129.065.129.432 0 .77-.007 1.015-.022l1.598-.021 1.49.021c.26.015.613.022 1.059.022.043 0 .065-.043.065-.129z" fill="currentColor"/></symbol><symbol id="icon-pinterest"><path d="M8.525.07a7.502 7.502 0 00-4.026 14.307 5.818 5.818 0 01.122-1.72c.139-.629.972-4.097.972-4.097a2.804 2.804 0 01-.243-1.183c0-1.113.643-1.944 1.442-1.944A1 1 0 017.8 6.563c0 .676-.434 1.697-.66 2.656a1.158 1.158 0 001.18 1.442c1.424 0 2.378-1.823 2.378-3.976 0-1.65-1.092-2.886-3.107-2.886a3.56 3.56 0 00-3.697 3.596 2.22 2.22 0 00.486 1.477.36.36 0 01.121.416c-.034.138-.121.467-.156.588a.265.265 0 01-.382.19c-1.038-.415-1.527-1.558-1.527-2.862 0-2.135 1.788-4.691 5.365-4.691 2.847 0 4.74 2.083 4.74 4.31 0 2.932-1.633 5.136-4.045 5.136a2.145 2.145 0 01-1.84-.934s-.434 1.736-.52 2.065a6.021 6.021 0 01-.764 1.598c.692.21 1.411.315 2.134.312a7.493 7.493 0 007.497-7.502A7.502 7.502 0 008.526.071L8.525.07z" fill="currentColor"/></symbol><symbol id="icon-search"><path d="M11.048 10.074L14 13.024l-.975.976-2.951-2.952A6.205 6.205 0 010 6.202 6.205 6.205 0 016.203 0a6.205 6.205 0 014.845 10.074zm-1.382-.512a4.808 4.808 0 001.36-3.36 4.823 4.823 0 00-4.823-4.824 4.822 4.822 0 00-4.825 4.825 4.823 4.823 0 004.825 4.824 4.808 4.808 0 003.36-1.361l.103-.104z" fill="currentColor"/></symbol><symbol id="icon-twitter"><path d="M15 1.543a5.875 5.875 0 01-1.768.516A3.263 3.263 0 0014.586.244a5.925 5.925 0 01-1.955.796 3.025 3.025 0 00-1.746-.996 2.913 2.913 0 00-1.954.344 3.206 3.206 0 00-1.353 1.543 3.48 3.48 0 00-.19 2.101 8.318 8.318 0 01-3.514-.995A8.868 8.868 0 011.044.604a3.44 3.44 0 00-.416 1.65c0 1.137.543 2.142 1.368 2.73a2.924 2.924 0 01-1.393-.41v.04c0 .758.246 1.492.696 2.079.45.586 1.076.988 1.773 1.139-.454.13-.93.15-1.391.056a3.287 3.287 0 001.094 1.631 2.958 2.958 0 001.78.648 6.03 6.03 0 01-2.15 1.162c-.782.233-1.6.3-2.405.196A8.318 8.318 0 004.717 13c5.661 0 8.757-4.999 8.757-9.334 0-.141-.004-.284-.01-.424A6.496 6.496 0 0015 1.544z" fill="currentColor"/></symbol></svg></div>
+    <div class="wrapper">
+      <style>
+        main {
+          margin-top: 100px;
+        }
+        
+        main > .container {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        
+        .components-backwards {
+          color: #ffffff;
+          display: inline-block;
+        }
+        
+        .components-backwards span:first-child {
+          position: relative;
+          top: -3px;
+        
+          display: inline-block;
+          margin-right: 15px;
+        
+          font-size: 16px;
+          line-height: 24px;
+          vertical-align: top;
+        
+          transform: scale(2);
+        }
+        
+        .components-backwards span:last-child {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        
+        .components-backwards + h1 {
+          margin-bottom: 0;
+        }
+        
+        .container > section {
+          padding: 70px 0 0 0;
+        }
+        
+        section > h2 {
+          margin: 0 0 20px 0;
+          padding: 20px 0;
+          position: relative;
+          color: #ffffff;
+        }
+        
+        section > h2::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100vw;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          background-color: #2c39f2;
+          z-index: -1;
+        }
+        
+        .header-ui {
+          background-color: #2c39f2;
+          padding: 20px 0;
+          position: fixed;
+          width: 100vw;
+          z-index: 99;
+          box-shadow: 0 0 3px 1px #000000;
+        }
+        
+        .header-ui__nav {
+          display: grid;
+          grid-template-columns: max-content 1fr;
+          gap: 20px 80px;
+        }
+        
+        .header-ui__inner-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 30px;
+        }
+        
+        .header-ui__inner-link {
+          color: #ffffff;
+          transition: color 0.3s ease;
+        }
+        
+        .header-ui__inner-link:hover,
+        .header-ui__inner-link.is-active {
+          color: #ff1553;
+        }
+        
+        .header-ui__inner-link.is-inactive {
+          color: #ffffff;
+          pointer-events: none;
+        }
+        
+        .btn {
+          margin: 10px 0;
+        }
+        
+        .wrapper {
+          overflow: hidden;
+        }
+        
+      </style>
+      <header class="header-ui">
+        <nav class="header-ui__nav container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
+          <ul class="header-ui__inner-list">
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#modals" data-navigation-link>Modals</a></li>
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#buttons" data-navigation-link>Buttons</a></li>
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#links" data-navigation-link>Links</a></li>
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#form-elements" data-navigation-link>Form elements</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="container">
+          <h1>UI-kit</h1>
+          <section id="modals">
+            <h2>Modals</h2>
+            <p>
+              <button class="btn btn--color-black" type="button" data-open-modal="login">modal-login
+              </button>
+            </p>
+          </section>
+          <section id="buttons">
+            <h2>Buttons</h2>
+            <button class="btn btn--brown" type="button">Текст
+            </button>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Текст"}).btn--brown</pre></code>
+            <button class="btn btn--border-brown btn--color-black" type="button">Текст
+            </button>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Текст"}).btn--border-brown.btn--color-black</pre></code>
+            <button class="btn btn--brown" type="button" disabled>Текст
+            </button>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Текст"}).btn--brown(disabled)</pre></code>
+          </section>
+          <section id="links">
+            <h2>Links</h2>
+            <a class="link btn--default" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">Текст
+            </a>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red</pre></code>
+            <a class="link link--underline" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Ссылка с подчёркиванием">Текст
+            </a>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "текст", href: "#", isExternal: true})(aria-label="Ссылка с подчёркиванием").link--underline</pre></code>
+          </section>
+          <section id="form-elements">
+            <h2>Form elements</h2>
+            <div data-form-validate data-callback="base">
+              <form method="post">
+                <h2 class="subtitle">Инпуты</h2>
+                <p>Input <b>data-validate-type="text", data-limitation="name", data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-required</b>.</p>
+                <div class="custom-input">
+                  <label>
+                    <input type="email" name="subscribe-email" placeholder="Your E-mail">
+                  </label>
+                </div>
+                <hr>
+                <div class="custom-input">
+                  <label>
+                    <input type="password" name="login-password" placeholder="Password">
+                  </label>
+                </div>
+                <hr>
+                <h2 class="subtitle">Чекбоксы</h2>
+                <p>Чекбокс <b>data-validate-type="checkbox", data-message-base="Поле обязательно к заполнению"</b>.</p>
+                <div>
+                  <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
+                    <label>
+                      <input type="checkbox" value="user-agreement-1" name="user-agreement"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Чекбокс</span>
+                    </label>
+                  </div>
+                </div>
+                <hr>
+                <button class="btn btn--brown" type="submit">Apply
+                </button>
+                <button class="btn btn--border-brown btn--color-black" type="reset">Clear All
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+      <script>const MoveTo = (() => {
+  /**
+  * Defaults
+  * @type {object}
+  */
+  const defaults = {
+    tolerance: 0,
+    duration: 800,
+    easing: 'easeOutQuart',
+    container: window,
+    callback() {},
+  };
+
+  /**
+  * easeOutQuart Easing Function
+  * @param  {number} t - current time
+  * @param  {number} b - start value
+  * @param  {number} c - change in value
+  * @param  {number} d - duration
+  * @return {number} - calculated value
+  */
+  function easeOutQuart(t, b, c, d) {
+    t /= d;
+    t--;
+    return -c * (t * t * t * t - 1) + b;
+  }
+
+  /**
+  * Merge two object
+  *
+  * @param  {object} obj1
+  * @param  {object} obj2
+  * @return {object} merged object
+  */
+  function mergeObject(obj1, obj2) {
+    const obj3 = {};
+    Object.keys(obj1).forEach((propertyName) => {
+      obj3[propertyName] = obj1[propertyName];
+    });
+
+    Object.keys(obj2).forEach((propertyName) => {
+      obj3[propertyName] = obj2[propertyName];
+    });
+    return obj3;
+  }
+
+  /**
+  * Converts camel case to kebab case
+  * @param  {string} val the value to be converted
+  * @return {string} the converted value
+  */
+  function kebabCase(val) {
+    return val.replace(/([A-Z])/g, function ($1) {
+      return '-' + $1.toLowerCase();
+    });
+  }
+
+  /**
+  * Count a number of item scrolled top
+  * @param  {Window|HTMLElement} container
+  * @return {number}
+  */
+  function countScrollTop(container) {
+    if (container instanceof HTMLElement) {
+      return container.scrollTop;
+    }
+    return container.pageYOffset;
+  }
+
+  /**
+  * MoveTo Constructor
+  * @param {object} options Options
+  * @param {object} easeFunctions Custom ease functions
+  */
+  // eslint-disable-next-line no-shadow
+  function MoveTo(options = {}, easeFunctions = {}) {
+    this.options = mergeObject(defaults, options);
+    this.easeFunctions = mergeObject({easeOutQuart}, easeFunctions);
+  }
+
+  /**
+  * Register a dom element as trigger
+  * @param  {HTMLElement} dom Dom trigger element
+  * @param  {function} callback Callback function
+  * @return {function|void} unregister function
+  */
+  MoveTo.prototype.registerTrigger = function (dom, callback) {
+    if (!dom) {
+      return;
+    }
+
+    const href = dom.getAttribute('href') || dom.getAttribute('data-target');
+    // The element to be scrolled
+    const target = (href && href !== '#')
+      ? document.getElementById(href.substring(1))
+      : document.body;
+    const options = mergeObject(this.options, _getOptionsFromTriggerDom(dom, this.options));
+
+    if (typeof callback === 'function') {
+      options.callback = callback;
+    }
+
+    const listener = (e) => {
+      e.preventDefault();
+      this.move(target, options);
+    };
+
+    dom.addEventListener('click', listener, false);
+
+    // eslint-disable-next-line consistent-return
+    return () => dom.removeEventListener('click', listener, false);
+  };
+
+  /**
+  * Move
+  * Scrolls to given element by using easeOutQuart function
+  * @param  {HTMLElement|number} target Target element to be scrolled or target position
+  * @param  {object} options Custom options
+  */
+  MoveTo.prototype.move = function (target, options = {}) {
+    if (target !== 0 && !target) {
+      return;
+    }
+
+    options = mergeObject(this.options, options);
+
+    let distance = typeof target === 'number' ? target : target.getBoundingClientRect().top;
+    const from = countScrollTop(options.container);
+    let startTime = null;
+    let lastYOffset;
+    distance -= options.tolerance;
+
+    // rAF loop
+    /* eslint-disable-next-line */
+    const loop = (currentTime) => {
+      const currentYOffset = countScrollTop(this.options.container);
+
+      if (!startTime) {
+        // To starts time from 1, we subtracted 1 from current time
+        // If time starts from 1 The first loop will not do anything,
+        // because easing value will be zero
+        startTime = currentTime - 1;
+      }
+
+      const timeElapsed = currentTime - startTime;
+
+      if (lastYOffset) {
+        if (
+          (distance > 0 && lastYOffset > currentYOffset) ||
+          (distance < 0 && lastYOffset < currentYOffset)
+        ) {
+          return options.callback(target);
+        }
+      }
+      lastYOffset = currentYOffset;
+
+      const val = this.easeFunctions[options.easing](timeElapsed, from, distance, options.duration);
+
+      options.container.scroll(0, val);
+
+      if (timeElapsed < options.duration) {
+        window.requestAnimationFrame(loop);
+      } else {
+        options.container.scroll(0, distance + from);
+        options.callback(target);
+      }
+    };
+
+    window.requestAnimationFrame(loop);
+  };
+
+  /**
+  * Adds custom ease function
+  * @param {string}   name Ease function name
+  * @param {function} fn   Ease function
+  */
+  MoveTo.prototype.addEaseFunction = function (name, fn) {
+    this.easeFunctions[name] = fn;
+  };
+
+  /**
+  * Returns options which created from trigger dom element
+  * @param  {HTMLElement} dom Trigger dom element
+  * @param  {object} options The instance's options
+  * @return {object} The options which created from trigger dom element
+  */
+  function _getOptionsFromTriggerDom(dom, options) {
+    const domOptions = {};
+
+    Object.keys(options).forEach((key) => {
+      const value = dom.getAttribute(`data-mt-${kebabCase(key)}`);
+      if (value) {
+        domOptions[key] = isNaN(value) ? value : parseInt(value, 10);
+      }
+    });
+    return domOptions;
+  }
+
+  return MoveTo;
+})();
+window.MoveTo = MoveTo;
+
+class NavigationChanger {
+  constructor() {
+    this._scrollDuration = 1000;
+    this._currentIndex = 0;
+    this._newCurrentIndex = null;
+    this._blockShift = 50;
+    this._linkElements = document.querySelectorAll('[data-navigation-link]');
+
+    this._moveTo = new window.MoveTo({
+      duration: this._scrollDuration,
+      easing: 'easeOutQuart',
+    });
+
+    this._documentScrollHandler = this._documentScrollHandler.bind(this);
+  }
+
+  init() {
+    if (!this._linkElements.length) {
+      return;
+    }
+    this._initMoveTo();
+    this._changeLinksActiveState();
+    document.addEventListener('scroll', this._documentScrollHandler);
+  }
+
+  _documentScrollHandler() {
+    this._changeLinksActiveState();
+  }
+
+  _changeLinksActiveState() {
+    this._linkElements.forEach((link, index) => {
+      const currentBlockElement = document.querySelector(`${link.getAttribute('href')}`);
+      if (!currentBlockElement) {
+        // eslint-disable-next-line no-console
+        console.error('Блока на который ссылается ссылка не существует! Проверьте соответствие href ссылок с id блоков');
+        return;
+      }
+      if (currentBlockElement.getBoundingClientRect().bottom > this._blockShift && currentBlockElement.getBoundingClientRect().top <= this._blockShift) {
+        link.classList.add('is-active');
+      } else {
+        link.classList.remove('is-active');
+      }
+
+      if (document.body.getBoundingClientRect().bottom - window.innerHeight < this._blockShift && currentBlockElement.getBoundingClientRect().top > this._blockShift) {
+        this._linkElements[index - 1].classList.remove('is-active');
+        link.classList.add('is-active');
+      }
+    });
+  }
+
+  _removeLinkAnimation() {
+    this._linkElements.forEach((link, index) => {
+      if (index !== this._currentIndex && index !== this._newCurrentIndex) {
+        link.classList.add('is-inactive');
+      }
+    });
+  }
+
+  _addLinkAnimation() {
+    this._linkElements.forEach((link) => link.classList.remove('is-inactive'));
+    this._currentIndex = this._newCurrentIndex;
+  }
+
+  _initMoveTo() {
+    this._linkElements.forEach((link, index) => {
+      link.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        const target = document.querySelector(`${link.getAttribute('href')}`);
+        if (!target) {
+          // eslint-disable-next-line no-console
+          console.error('Блока на который ссылается ссылка не существует! Проверьте соответствие href ссылок с id блоков');
+          return;
+        }
+        this._newCurrentIndex = index;
+        this._moveTo.move(target);
+        this._removeLinkAnimation();
+        setTimeout(() => {
+          this._addLinkAnimation();
+        }, this._scrollDuration);
+      });
+    });
+  }
+}
+
+const navigationChanger = new NavigationChanger();
+
+navigationChanger.init();
+
+      </script>
+    </div>
+    <div class="modal modal--preload modal--login" data-modal="login">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal__img"><img src="img/content/img-1.jpg" srcset="img/content/img-1@2x.jpg 2x" width="430" height="148" alt="image">
+          </div>
+          <div class="modal__inner">
+            <h2 class="modal__title title title--h2">Log In</h2>
+            <div class="modal__form" data-form-validate data-callback="base">
+              <form action="#" method="post" autocomplete>
+                <div class="custom-input">
+                  <label>
+                    <input type="email" name="login-email" placeholder="Your E-mail">
+                  </label>
+                </div>
+                <div class="custom-input">
+                  <label>
+                    <input type="password" name="login-password" placeholder="Password">
+                  </label>
+                </div>
+                <div class="modal__link">
+                  <a class="link link--default" href="#">Forgot your password?
+                  </a>
+                </div>
+                <div class="modal__form-submit">
+                  <button class="btn btn--brown btn--full-screen" type="submit">Log In
+                  </button>
+                </div>
+                <p class="modal__sigup text">Don’t have an account?
+                  <a class="link link--default" href="#">Sign up
+                  </a>
+                </p>
+              </form>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
