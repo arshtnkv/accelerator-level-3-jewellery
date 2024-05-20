@@ -437,7 +437,6 @@ template {
   display: flex;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
@@ -468,7 +467,6 @@ template {
   position: relative;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
 }
@@ -490,7 +488,6 @@ template {
   align-items: flex-start;
   -webkit-transition-property: height, -webkit-transform;
   transition-property: height, -webkit-transform;
-  -o-transition-property: transform, height;
   transition-property: transform, height;
   transition-property: transform, height, -webkit-transform;
 }
@@ -535,25 +532,21 @@ template {
 
 .swiper-3d .swiper-slide-shadow-left {
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-right {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-top {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-bottom {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
@@ -728,7 +721,6 @@ template {
   position: absolute;
   text-align: center;
   -webkit-transition: 300ms opacity;
-  -o-transition: 300ms opacity;
   transition: 300ms opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -861,7 +853,6 @@ button.swiper-pagination-bullet {
   display: inline-block;
   -webkit-transition: 200ms top, 200ms -webkit-transform;
   transition: 200ms top, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top, 200ms -webkit-transform;
 }
@@ -884,7 +875,6 @@ button.swiper-pagination-bullet {
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 200ms left, 200ms -webkit-transform;
   transition: 200ms left, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left, 200ms -webkit-transform;
 }
@@ -892,7 +882,6 @@ button.swiper-pagination-bullet {
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 200ms right, 200ms -webkit-transform;
   transition: 200ms right, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right, 200ms -webkit-transform;
 }
@@ -1086,7 +1075,6 @@ button.swiper-pagination-bullet {
 
 .swiper-free-mode > .swiper-wrapper {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
@@ -1107,14 +1095,12 @@ button.swiper-pagination-bullet {
 
 .swiper-fade.swiper-free-mode .swiper-slide {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 .swiper-fade .swiper-slide {
   pointer-events: none;
   -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -1233,7 +1219,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   -webkit-transition-property: opacity, height, -webkit-transform;
   transition-property: opacity, height, -webkit-transform;
-  -o-transition-property: transform, opacity, height;
   transition-property: transform, opacity, height;
   transition-property: transform, opacity, height, -webkit-transform;
 }
@@ -1344,7 +1329,6 @@ button.swiper-pagination-bullet {
   -webkit-transition: transform 0.3s;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
@@ -1867,7 +1851,6 @@ button,
   white-space: nowrap;
   border: 0;
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
 }
 
@@ -1891,7 +1874,6 @@ button,
 
 .no-transition {
   -webkit-transition: none !important;
-  -o-transition: none !important;
   transition: none !important;
 }
 
@@ -1959,7 +1941,6 @@ button,
   height: 100%;
   opacity: 1;
   -webkit-transition: opacity 0.6s ease;
-  -o-transition: opacity 0.6s ease;
   transition: opacity 0.6s ease;
 }
 
@@ -2102,7 +2083,6 @@ button,
   opacity: 0;
   -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   pointer-events: none;
@@ -2206,7 +2186,6 @@ button,
 
 .modal--preload {
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
@@ -2262,7 +2241,6 @@ button,
   cursor: pointer;
   white-space: nowrap;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -2280,7 +2258,6 @@ button,
 
 .btn--icon-arrow-right {
   -webkit-transition: border-color 0.3s ease, color 0.3s ease;
-  -o-transition: border-color 0.3s ease, color 0.3s ease;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
 
@@ -2288,14 +2265,12 @@ button,
   color: #a87b62;
   border-color: #a87b62;
   -webkit-transition: border-color 0.3s ease, color 0.3s ease;
-  -o-transition: border-color 0.3s ease, color 0.3s ease;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .btn--icon-arrow-right.focus-visible:focus svg {
   color: #a87b62;
   -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -2305,7 +2280,6 @@ button,
   margin-left: 10px;
   color: #ffffff;
   -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -2368,7 +2342,6 @@ button,
   background: #a87b62;
   border-radius: 2px;
   -webkit-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  -o-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
 }
 
@@ -2395,13 +2368,11 @@ button,
   top: 30%;
   width: 30px;
   -webkit-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  -o-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   -webkit-transition-delay: 150ms;
-  -o-transition-delay: 150ms;
   transition-delay: 150ms;
 }
 
@@ -2410,13 +2381,11 @@ button,
   top: 20px;
   width: 20px;
   -webkit-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  -o-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transition-delay: 50ms;
-  -o-transition-delay: 50ms;
   transition-delay: 50ms;
 }
 
@@ -2425,13 +2394,11 @@ button,
   top: 20px;
   width: 20px;
   -webkit-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  -o-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-transition-delay: 100ms;
-  -o-transition-delay: 100ms;
   transition-delay: 100ms;
 }
 
@@ -2439,21 +2406,18 @@ button,
   top: -2%;
   top: 50%;
   -webkit-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  -o-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
 }
 
 .burger.is-open .burger:not(.is-open):hover span:nth-child(2) {
   top: 13%;
   -webkit-transition: 0.4s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  -o-transition: 0.4s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   transition: 0.4s cubic-bezier(0.8, 0.5, 0.2, 1.4);
 }
 
 .burger.is-open .burger:not(.is-open):hover span:nth-child(3) {
   top: -2%;
   -webkit-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  -o-transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
 }
 
@@ -2467,7 +2431,6 @@ button,
   user-select: none;
   white-space: nowrap;
   -webkit-transition: opacity 0.3s ease, color 0.3s ease;
-  -o-transition: opacity 0.3s ease, color 0.3s ease;
   transition: opacity 0.3s ease, color 0.3s ease;
 }
 
@@ -2479,7 +2442,6 @@ button,
 .link--default.focus-visible:focus {
   color: #a87b62;
   -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -2510,7 +2472,6 @@ button,
   text-decoration-thickness: 1px;
   -webkit-transition: -webkit-text-decoration-color 0.3s ease;
   transition: -webkit-text-decoration-color 0.3s ease;
-  -o-transition: text-decoration-color 0.3s ease;
   transition: text-decoration-color 0.3s ease;
   transition: text-decoration-color 0.3s ease, -webkit-text-decoration-color 0.3s ease;
 }
@@ -2520,7 +2481,6 @@ button,
   text-decoration-color: rgba(255, 255, 255, 0);
   -webkit-transition: -webkit-text-decoration-color 0.3s ease;
   transition: -webkit-text-decoration-color 0.3s ease;
-  -o-transition: text-decoration-color 0.3s ease;
   transition: text-decoration-color 0.3s ease;
   transition: text-decoration-color 0.3s ease, -webkit-text-decoration-color 0.3s ease;
 }
@@ -2590,7 +2550,6 @@ button,
   border: none;
   outline: none;
   -webkit-transition: border ease;
-  -o-transition: border ease;
   transition: border ease;
 }
 
@@ -2626,7 +2585,6 @@ button,
   font-size: 14px;
   opacity: 0.7;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -2657,7 +2615,6 @@ button,
 .custom-input label input:hover::placeholder {
   opacity: 1;
   -webkit-transition: opacity ease;
-  -o-transition: opacity ease;
   transition: opacity ease;
 }
 
@@ -2679,7 +2636,6 @@ button,
   color: #ff1553;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -2755,7 +2711,6 @@ button,
   height: 13px;
   border: 1px solid #a87b62;
   -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
 }
 
@@ -2771,7 +2726,6 @@ button,
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -2882,7 +2836,6 @@ button,
   border: none;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
@@ -2893,7 +2846,6 @@ button,
   transform: scale(1.2);
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
@@ -2901,7 +2853,6 @@ button,
 .slider__btn.focus-visible:focus svg {
   color: #000000;
   -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -2910,7 +2861,6 @@ button,
   height: 11px;
   color: #564034;
   -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -2933,7 +2883,6 @@ button,
   vertical-align: middle;
   cursor: pointer;
   -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -2941,7 +2890,6 @@ button,
 .slider__pagination .swiper-pagination-bullet:focus {
   color: #1D1613;
   -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -2984,14 +2932,12 @@ button,
 
 [data-accordion=parent].no-transition [data-accordion=content] {
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
 [data-accordion=content] {
   max-height: 0;
   -webkit-transition: max-height 0.3s;
-  -o-transition: max-height 0.3s;
   transition: max-height 0.3s;
   overflow: hidden;
 }
@@ -3064,7 +3010,6 @@ button,
   background-color: transparent;
   border-bottom: 1px solid #ffffff;
   -webkit-transition: border-color 0.3s ease;
-  -o-transition: border-color 0.3s ease;
   transition: border-color 0.3s ease;
 }
 
@@ -3072,7 +3017,6 @@ button,
 .subscribe-form__form .custom-input input:focus-visible {
   border-color: #a87b62;
   -webkit-transition: border-color 0.3s ease;
-  -o-transition: border-color 0.3s ease;
   transition: border-color 0.3s ease;
 }
 
@@ -3103,7 +3047,6 @@ button,
 .subscribe-form__form .custom-input input:hover::placeholder {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -3153,7 +3096,6 @@ button,
   flex-direction: column;
   -webkit-transition: -webkit-box-shadow 0.3s ease;
   transition: -webkit-box-shadow 0.3s ease;
-  -o-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
@@ -3206,7 +3148,6 @@ button,
   box-shadow: 0px 3px 16px 0 rgba(41, 52, 73, 0.5);
   -webkit-transition: -webkit-box-shadow 0.3s ease;
   transition: -webkit-box-shadow 0.3s ease;
-  -o-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
@@ -3495,7 +3436,6 @@ button,
     opacity: 0;
     overflow-y: scroll;
     -webkit-transition: opacity 0.6s ease;
-    -o-transition: opacity 0.6s ease;
     transition: opacity 0.6s ease;
   }
 
@@ -3667,7 +3607,6 @@ button,
     transform: translateX(-120%);
     -webkit-transition: opacity 0.3s ease, visibility 0.3s ease 1s, -webkit-transform 0.3s ease;
     transition: opacity 0.3s ease, visibility 0.3s ease 1s, -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease 1s;
     transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease 1s;
     transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease 1s, -webkit-transform 0.3s ease;
     z-index: 30;
@@ -3681,7 +3620,6 @@ button,
     transform: translateX(0);
     -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
     transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease, opacity 0.3s ease;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
   }
@@ -3917,14 +3855,12 @@ button,
     color: #a87b62;
     border-color: #a87b62;
     -webkit-transition: border-color 0.3s ease, color 0.3s ease;
-    -o-transition: border-color 0.3s ease, color 0.3s ease;
     transition: border-color 0.3s ease, color 0.3s ease;
   }
 
   .btn--icon-arrow-right:hover:not(.focus-visible) svg {
     color: #a87b62;
     -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
   }
 
@@ -3935,7 +3871,6 @@ button,
   .link--default:hover:not(.focus-visible) {
     color: #a87b62;
     -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
   }
 
@@ -3944,7 +3879,6 @@ button,
     text-decoration-color: rgba(255, 255, 255, 0);
     -webkit-transition: -webkit-text-decoration-color 0.3s ease;
     transition: -webkit-text-decoration-color 0.3s ease;
-    -o-transition: text-decoration-color 0.3s ease;
     transition: text-decoration-color 0.3s ease;
     transition: text-decoration-color 0.3s ease, -webkit-text-decoration-color 0.3s ease;
   }
@@ -3955,7 +3889,6 @@ button,
     transform: scale(1.2);
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   }
@@ -3963,7 +3896,6 @@ button,
   .slider__btn:hover:not(.focus-visible) svg {
     color: #000000;
     -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
   }
 
@@ -3972,7 +3904,6 @@ button,
     box-shadow: 0px 3px 16px 0 rgba(41, 52, 73, 0.5);
     -webkit-transition: -webkit-box-shadow 0.3s ease;
     transition: -webkit-box-shadow 0.3s ease;
-    -o-transition: box-shadow 0.3s ease;
     transition: box-shadow 0.3s ease;
     transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   }
